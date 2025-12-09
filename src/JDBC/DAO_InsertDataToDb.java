@@ -3,7 +3,7 @@ package oracle__java__connector;
 import java.sql.*;
 // DA0 == Data Accessing Object , Inserting the values using the dao
 
-public class java_toDb_ADD_Student {
+public class DAO_InsertDataToDb {
     public static void main(String[] args) throws Exception {
 
         Cricketer c = new Cricketer(7, "jordon", 500);
@@ -29,7 +29,7 @@ class Cricketer {
     Connection conn() throws Exception {
         Connection con = null;
         Class.forName("oracle.jdbc.OracleDriver");
-        con = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/freepdb1", "dbdb", "7013197589");
+        con = DriverManager.getConnection("db_url", "db_user", "db_pass");
         return con;
 
     }
@@ -74,3 +74,6 @@ class Cricketer {
 
 
 }
+
+//create Cricket table
+//{rank , name , runs}

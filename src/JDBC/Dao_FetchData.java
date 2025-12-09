@@ -2,7 +2,7 @@ package oracle__java__connector;
 
 import java.sql.*;
 
-public class java_toDb_Insert {   // class
+public class  Dao_FetchData {   // class
     public static void main(String[] args) throws Exception {
 
         Student s = new Student();
@@ -29,7 +29,7 @@ class Student {
 
         Class.forName("oracle.jdbc.OracleDriver");
 
-        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/freepdb1", "dbdb", "7013197589");
+        Connection con = DriverManager.getConnection("Db_url", "Db_user", "Db_password");
 
         Statement st = con.createStatement();
 
@@ -43,3 +43,6 @@ class Student {
     }
 
 }
+
+//crate db student table
+//{id,Name,Marks}

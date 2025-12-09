@@ -3,12 +3,12 @@ package oracle__java__connector;
 import java.sql.*;
 
 
-public class insert_java_toDb {
+public class InsertDataToDb {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        String url = "jdbc:oracle:thin:@//localhost:1521/freepdb1";
-        String uname = "dbdb";
-        String pass = "7013197589";
+        String url = "db_url";
+        String uname = "db_user";
+        String pass = "db_pass";
 
         int emp_id = 8;
         String ename = "laya";
@@ -49,3 +49,6 @@ public class insert_java_toDb {
 
     }
 }
+
+//create table : emp
+//{emp_id, ename, depid, salary}

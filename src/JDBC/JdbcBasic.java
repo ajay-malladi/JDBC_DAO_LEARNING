@@ -14,12 +14,12 @@ package oracle__java__connector;
 
 import java.sql.*;   // step 1
 
-public class DemoClass {
+public class JdbcBasic {
     public static void main(String[] args) throws Exception {
 
-        String url = "jdbc:oracle:thin:@//localhost:1521/freepdb1";
-        String uname = "dbdb";   // it is you are db credentials
-        String pass = "7013197589";
+        String url = "db_url";
+        String uname = "db_user";   // it is you are db credentials
+        String pass = "db_pass";
         String query = "select * from emp order by emp_id";
 
         try {
@@ -51,3 +51,5 @@ public class DemoClass {
 
 
 //DML == executeUpdate();
+//table to crate in db;
+//emp table{emp_id,ename,sal}
